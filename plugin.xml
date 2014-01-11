@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.github.athieriot.cordova.media.discoverer.plugin"
+    version="1.0.0">
+
+    <name>MediaDiscovererPlugin</name>
+
+  <description>
+    Media Discoverer Plugin for Steroids.js
+  </description>
+
+  <asset src="www/MediaDiscovererPlugin.js" target="plugins/MediaDiscovererPlugin.js" />
+
+  <engines>
+    <engine name="cordova" version=">=2.7.0" />
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="plugins">
+      <plugin name="MediaDiscoverer" value="com.github.athieriot.cordova.media.discoverer.plugin"/>
+    </config-file>
+
+    <source-file src="src/android/com/github/athieriot/cordova/media/discoverer/plugin/MediaDiscoverer.java"
+      target-dir="src/com/github/athieriot/plugin" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*/plugins">
+      <plugin name="MediaDiscoverer" value="MediaDiscoverer" onload="true" />
+    </config-file>
+
+    <config-file target="config.xml" parent="/widget">
+      <feature name="MediaDiscoverer">
+        <param name="ios-package" value="MediaDiscoverer"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/MediaDiscoverer.h" />
+
+    <source-file src="src/ios/MediaDiscoverer.m" />
+
+  </platform>
+</plugin>
