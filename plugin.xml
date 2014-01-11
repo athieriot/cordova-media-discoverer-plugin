@@ -15,6 +15,10 @@
     <engine name="cordova" version=">=2.7.0" />
   </engines>
 
+  <js-module src="www/MediaType.js" name="MediaType">
+    <clobbers target="MediaType" />
+  </js-module>
+
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="plugins">
