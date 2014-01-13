@@ -15,11 +15,11 @@ window.discover(MediaType.VIDEO, function(videoList) {
 
 ## Return Format
 
-[{
-   "data": "/storage/sdcard/Movies/Doctor.Who.2005.6x10.The.Girl.Who.Waited.avi",
-   "display_name": "Doctor Who - Series 6 - The Girl Who Waited",
-   "title": "Doctor.Who.2005.6x10.The.Girl.Who.Waited",
-   "duration": "2516008",
-   "mime_type": "video/avi",
-   "size": "367358782"
-}]
+        [{
+           "data": "/storage/sdcard/Movies/Doctor.Who.2005.6x10.The.Girl.Who.Waited.avi",
+           "display_name": "Doctor Who - Series 6 - The Girl Who Waited",
+           "title": "Doctor.Who.2005.6x10.The.Girl.Who.Waited",
+           "duration": "2516008",
+           "mime_type": "video/avi",
+           "size": "367358782"
+        }]
