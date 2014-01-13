@@ -1,5 +1,9 @@
-window.discover = function(types, callback) {
+var MediaType = {
+  'VIDEO': 10
+}
+
+window.discover = function(type, callback) {
     cordova.exec(callback, function(err) {
-        callback([]);
-    }, "MediaDiscoverer", "discover", [types]);
+        callback(err);
+    }, "MediaDiscoverer", "discover", [type]);
 };

@@ -9,24 +9,22 @@
     Media Discoverer Plugin for Steroids.js
   </description>
 
-  <asset src="www/MediaDiscovererPlugin.js" target="plugins/MediaDiscovererPlugin.js" />
+  <asset src="www/MediaDiscovererPlugin.js" target="javascripts/plugins/MediaDiscovererPlugin.js" />
 
   <engines>
     <engine name="cordova" version=">=2.7.0" />
   </engines>
 
-  <js-module src="www/MediaType.js" name="MediaType">
-    <clobbers target="MediaType" />
-  </js-module>
-
   <!-- android -->
   <platform name="android">
-    <config-file target="res/xml/config.xml" parent="plugins">
-      <plugin name="MediaDiscoverer" value="com.github.athieriot.cordova.media.discoverer.plugin"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MediaDiscoverer">
+        <param name="android-package" value="com.github.athieriot.cordova.media.discoverer.plugin.MediaDiscoverer"/>
+      </feature>
     </config-file>
 
     <source-file src="src/android/com/github/athieriot/cordova/media/discoverer/plugin/MediaDiscoverer.java"
-      target-dir="src/com/github/athieriot/plugin" />
+      target-dir="src/com/github/athieriot/cordova/plugins" />
   </platform>
 
   <!-- ios -->
